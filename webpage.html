@@ -34,7 +34,7 @@
             text-align: left;
         }
         .image-section {
-            background: url('pianta-di-caffe.jpg') no-repeat center center;
+            background: url('Piantagione.jpeg') no-repeat center center;
             background-size: cover;
             height: 300px;
         }
@@ -51,12 +51,26 @@
     </style>
 </head>
 <body>
+    <div id="presentationPage" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 100; display: flex; justify-content: center; align-items: center;">
+
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(103,63,45,1.00); z-index: 1;"></div>
+
+        <div style="text-align: center; z-index: 3;">
+            <h1 style="font-size: 4em; font-weight: bold; color: white;">Welcome to Coffee and Data Visualisation</h1>
+            <p style="font-size: 1.5em; font-weight: bold; color: white;">Authors: Del Grande Matteo, Lucchina Luca, Nazifi Endrit</p>
+            <p style="font-size: 1.5em; font-weight: bold; color: white;">D2A-SUPSI</p>
+            <div style="position: absolute; bottom: 20px; right: 20px; font-size: 1em;">
+                The page will load in <span id="countdown">5</span> seconds...
+            </div>
+        </div>
+    </div>
+
     <header>
-        <h1>Coffee export</h1>
+        <h1><strong>Coffee export</strong></h1>
         <p>Final Project Data Visualization </p>
     </header>
 
-    <div class="image-section"></div> <!-- Sezione per l'immagine del caffè -->
+    <div class="image-section"></div>
 
     <div class="container">
 
@@ -69,32 +83,100 @@
 
         <div class="row graph-section">
             <div class="col-md-12 graph-container">
-                <h2 style="color: black;">Introduzione</h2>
+                <h2 style="color: black;"><strong>Introduzione</strong></h2>
                 <p style="color: black;">Qui va l'introduzione'.</p>
             </div>
         </div>
 
         <div class="row graph-section">
             <div class="col-md-12 graph-container">
-                <h2 style="color: black;">Coffee export for the highest producing countries world wide until 2013</h2>
+                <h2 style="color: black;"><strong>Total Coffee Production from 1995 to 2019</strong></h2>
+                <img src="fourth_graph.png" style="width: 100%; height: auto;" alt="Total Coffee Production from 1995 to 2019">
+                <p style="color: black;">Qui va la descrizione.</p>
+                <!-- Pulsante per aprire la pagina del report -->
+                <a href="report_graph_1.html" target="_blank">
+                    <button style="background-color: #673f2d; color: white; padding: 10px 20px; margin: 10px 0; border: none; cursor: pointer;">
+                        Report
+                    </button>
+                </a>
+                <a href="coffee_exports.csv" download>
+                    <button style="background-color: blue; color: white; padding: 10px 20px; margin: 10px 0; border: none; cursor: pointer;">
+                        Download dataset
+                    </button>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="row graph-section">
+            <div class="col-md-12 graph-container">
+                <h2 style="color: black;"><strong>Coffee export for the highest producing countries world wide until 2013</strong></h2>
                 <iframe src="first_graph.html" width="100%" height="500"></iframe>
                 <p style="color: black;">Qui va la descrizione.</p>
+                <a href="report_graph_2.html" target="_blank">
+                    <button style="background-color: #673f2d; color: white; padding: 10px 20px; margin: 10px 0; border: none; cursor: pointer;">
+                        Report
+                    </button>
+                </a>
+                <a href="exports-calendar-year.csv" download>
+                    <button style="background-color: blue; color: white; padding: 10px 20px; margin: 10px 0; border: none; cursor: pointer;">
+                        Download dataset
+                    </button>
+                </a>
             </div>
         </div>
 
         <div class="row graph-section">
             <div class="col-md-12 graph-container">
-                <h2 style="color: black;">Top 5 coffee exporting countries in time to 2013</h2>
+                <h2 style="color: black;"><strong>Top 5 coffee exporting countries in time to 2013</strong></h2>
                 <iframe src="second_graph.html" width="100%" height="500"></iframe>
                 <p style="color: black;">Qui va la descrizione.</p>
+                <a href="report_graph_3.html" target="_blank">
+                    <button style="background-color: #673f2d; color: white; padding: 10px 20px; margin: 10px 0; border: none; cursor: pointer;">
+                        Report
+                    </button>
+                </a>
+                <a href="disappearance.csv" download>
+                    <button style="background-color: blue; color: white; padding: 10px 20px; margin: 10px 0; border: none; cursor: pointer;">
+                        Download dataset
+                    </button>
+                </a>
             </div>
         </div>
 
         <div class="row graph-section">
             <div class="col-md-12 graph-container">
-                <h2 style="color: black;">Mean Number of Steps per Day vs. Participant ID</h2>
-                <img src="third_graph.png" style="width: 100%; height: auto;" alt="Mean Number of Steps per Day vs. Participant ID">
+                <h2 style="color: black;"><strong>Top 50 Participants with greatest sleep difference</strong></h2>
+                <img src="third_graph.png" style="width: 100%; height: auto;" alt="Top 50 Participants with greatest sleep difference">
                 <p style="color: black;">Qui va la descrizione.</p>
+                <a href="report_graph_4.html" target="_blank">
+                    <button style="background-color: #673f2d; color: white; padding: 10px 20px; margin: 10px 0; border: none; cursor: pointer;">
+                        Report
+                    </button>
+                </a>
+                <a href="sleep_minutes_evident_dataset.csv" download>
+                    <button style="background-color: blue; color: white; padding: 10px 20px; margin: 10px 0; border: none; cursor: pointer;">
+                        Download dataset
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <div class="row graph-section">
+            <div class="col-md-12 graph-container">
+                <h2 style="color: black;"><strong>Comparison of Average Sleep Duration</strong></h2>
+                <img src="fifth_graph.png" style="width: 100%; height: auto;" alt="Comparison of Average Sleep Duration">
+                <p style="color: black;">Qui va la descrizione.</p>
+                <a href="report_graph_5.html" target="_blank">
+                    <button style="background-color: #673f2d; color: white; padding: 10px 20px; margin: 10px 0; border: none; cursor: pointer;">
+                        Report
+                    </button>
+                </a>
+                <a href="sleep_minutes_evident_dataset.csv" download>
+                    <button style="background-color: blue; color: white; padding: 10px 20px; margin: 10px 0; border: none; cursor: pointer;">
+                        Download dataset
+                    </button>
+                </a>
             </div>
         </div>
 
@@ -103,7 +185,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-left">
-                <p>© 2023 Caffè e Data Visualization </p>
+                <p>SUPSI-Dipartimento tecnologie innovative </p>
             </div>
             <div>
                 <p>Group's Name: Matteo Del Grande, Luca Lucchina, Endrit Nazifi</p>
@@ -117,5 +199,20 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        var seconds = 5;
+        var countdownElement = document.getElementById('countdown');
+        var countdownTimer = setInterval(function() {
+            seconds--;
+            countdownElement.innerText = seconds;
+            if (seconds <= 0) {
+                clearInterval(countdownTimer);
+                document.getElementById('presentationPage').style.display = 'none';
+            }
+        }, 1000);
+    </script>
+
+
 </body>
 </html>
