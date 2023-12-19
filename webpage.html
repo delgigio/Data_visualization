@@ -2,23 +2,39 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Caffè e Data Visualization</title>
+    <title>Data visualizaton project</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!-- Google Fonts -->
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
+            color: #fff;
+        }
+
+        .blurred-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: url('CAFFE_2.png') no-repeat center center fixed;
             background-size: cover;
-            color: #fff;
+            filter: blur(5px);
+            z-index: -1;
+        }
+
+        #presentationPage {
+            position: fixed;
+
+            z-index: 0;
         }
         header, footer {
             background-color: #673f2d;
             color: #fff;
-            padding: 10px 0;
+            padding: 50px 0;
             text-align: center;
         }
         .footer-container {
@@ -36,7 +52,7 @@
         .image-section {
             background: url('Piantagione.jpeg') no-repeat center center;
             background-size: cover;
-            height: 300px;
+            height: 750px;
         }
         .graph-section {
             background-color: rgba(255, 255, 255, 0.8);
@@ -51,12 +67,15 @@
     </style>
 </head>
 <body>
+    <div class="blurred-background"></div>
     <div id="presentationPage" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 100; display: flex; justify-content: center; align-items: center;">
 
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(103,63,45,1.00); z-index: 1;"></div>
 
         <div style="text-align: center; z-index: 3;">
-            <h1 style="font-size: 4em; font-weight: bold; color: white;">Welcome to Coffee and Data Visualisation</h1>
+            <h1 style="font-size: 4em; font-weight: bold; color: white;"><strong>Welcome to our Data Visualisation Project</strong></h1>
+            <br>
+            <br>
             <p style="font-size: 1.5em; font-weight: bold; color: white;">Authors: Del Grande Matteo, Lucchina Luca, Nazifi Endrit</p>
             <p style="font-size: 1.5em; font-weight: bold; color: white;">D2A-SUPSI</p>
             <div style="position: absolute; bottom: 20px; right: 20px; font-size: 1em;">
@@ -66,8 +85,9 @@
     </div>
 
     <header>
-        <h1><strong>Coffee export</strong></h1>
-        <p>Final Project Data Visualization </p>
+        <h1><strong>The Journey of Coffee: From Plant to Cup.</strong></h1>
+        <br>
+        <h2><strong>A dive into the process of coffee production and consumption, including its impact on human health.</strong></h2>
     </header>
 
     <div class="image-section"></div>
@@ -75,28 +95,22 @@
     <div class="container">
 
         <div class="row graph-section">
-            <div class="col-md-12 graph-container">
-                <h2 style="color: black; text-align: center;"><strong>Dalla pianta alla tazzina, il viaggio del caffè.
-                    Un tuffo tra produzione e consumazione, osservando anche gli effetti sull’essere umano.</strong></h2>
+            <div class="col-md-10 graph-container">
+                <h2 style="color: black;"><strong>Introduction</strong></h2>
+                <p style="color: black;">Coffee is the second most consumed drink in the world and has become an irreplaceable pillar in the daily routine of millions of people. Whether to start the day with energy, for an invigorating afternoon break, or as a pretext for social gatherings, the consumption of two or three cups a day has become a norm for many. But, while we delight in its unmistakable aroma and rich flavour, how many times have we stopped to reflect on how our coffee is produced? And are we really aware of how has coffee production changed in recent years?
+                                In this space, we aim to explore precisely these questions. Coffee is not just a question of taste and tradition; it is also a complex story of agriculture, economics and environmental impact. Over the past twenty years, coffee production has undergone significant evolution, often driven by growing global demand. But at what price?
+                                Our goal is simple but fundamental: to increase coffee consumers' awareness of the environmental implications behind this widespread and beloved drink.
+                                When we enjoy our daily coffee, we often don't consider the journey each bean has made to get to our cups. This journey, however, is filled with stories about land use, water management, agricultural practices and, above all, the impact on forests, biodiversity and communities. It is also important to recognize how the growing consumption of coffee is affecting people's quality of life, particularly considering the increase in its use across all age groups, including the youngest.</p>
             </div>
         </div>
 
         <div class="row graph-section">
-            <div class="col-md-12 graph-container">
-                <h2 style="color: black;"><strong>Introduzione</strong></h2>
-                <p style="color: black;">Qui va l'introduzione'.</p>
-            </div>
-        </div>
-
-        <div class="row graph-section">
-            <div class="col-md-12 graph-container">
+            <div class="col-md-10 graph-container">
                 <h2 style="color: black;"><strong>Total Coffee Production from 1995 to 2019</strong></h2>
                 <img src="fourth_graph.png" style="width: 100%; height: auto;" alt="Total Coffee Production from 1995 to 2019">
-                <p style="color: black;">Qui va la descrizione.</p>
-                <!-- Pulsante per aprire la pagina del report -->
                 <a href="report_graph_1.html" target="_blank">
                     <button style="background-color: #673f2d; color: white; padding: 10px 20px; margin: 10px 0; border: none; cursor: pointer;">
-                        Report
+                        Visualization protocol
                     </button>
                 </a>
                 <a href="coffee_exports.csv" download>
@@ -105,17 +119,22 @@
                     </button>
                 </a>
             </div>
+
+            <div class="col-md-10 graph-container">
+                <p style="color: black;">This graph shows data relating to coffee exports from the main producing countries. However, it is important to recognize that behind these numbers there is a more complex reality regarding the environment and its forests.
+                                Countries like Brazil and Colombia, which dominate the chart with the highest export volumes, are also known for their vast forests. For example, Brazil is home to a significant portion of the Amazon Rainforest, often described as the "lungs of the Earth" due to its crucial role in regulating the global climate and absorbing CO2. In Vietnam, we find forests like that of the Mek, which is another vital ecosystem.
+                                The growing global demand for coffee has led to the conversion of forests into agricultural land to cultivate this precious resource. This practice can have deleterious effects on the environment, including loss of biodiversity, alterations to hydrological patterns, and release of stored carbon, thus contributing to climate change.</p>
+            </div>
         </div>
 
 
         <div class="row graph-section">
             <div class="col-md-12 graph-container">
-                <h2 style="color: black;"><strong>Coffee export for the highest producing countries world wide until 2013</strong></h2>
+                <h2 style="color: black;"><strong>Coffee export for the highest producing countries worldwide until 2013</strong></h2>
                 <iframe src="first_graph.html" width="100%" height="500"></iframe>
-                <p style="color: black;">Qui va la descrizione.</p>
                 <a href="report_graph_2.html" target="_blank">
                     <button style="background-color: #673f2d; color: white; padding: 10px 20px; margin: 10px 0; border: none; cursor: pointer;">
-                        Report
+                        Visualization protocol
                     </button>
                 </a>
                 <a href="exports-calendar-year.csv" download>
@@ -124,16 +143,19 @@
                     </button>
                 </a>
             </div>
+
+            <div class="col-md-10 graph-container">
+                <p style="color: black;">This graph shows data relating to coffee exports from the main producing countries. However, it is important to recognize that behind these numbers there is a more complex reality regarding the environment and its forests. Countries like Brazil and Colombia, which dominate the chart with the highest export volumes, are also known for their vast forests. For example, Brazil is home to a significant portion of the Amazon Rainforest, often described as the "lungs of the Earth" due to its crucial role in regulating the global climate and absorbing CO2. In Vietnam, we find forests like that of the Mek, which is another vital ecosystem. The relationship between coffee production and deforestation is complex. The growing global demand for coffee may lead to the conversion of forests into agricultural land to cultivate this valuable resource. This practice can have deleterious effects on the environment, including loss of biodiversity, alteration of hydrological patterns and release of stored carbon, thus contributing to climate change.</p>
+            </div>
         </div>
 
         <div class="row graph-section">
             <div class="col-md-12 graph-container">
                 <h2 style="color: black;"><strong>Top 5 coffee exporting countries in time to 2013</strong></h2>
                 <iframe src="second_graph.html" width="100%" height="500"></iframe>
-                <p style="color: black;">Qui va la descrizione.</p>
                 <a href="report_graph_3.html" target="_blank">
                     <button style="background-color: #673f2d; color: white; padding: 10px 20px; margin: 10px 0; border: none; cursor: pointer;">
-                        Report
+                        Visualization protocol
                     </button>
                 </a>
                 <a href="disappearance.csv" download>
@@ -142,16 +164,28 @@
                     </button>
                 </a>
             </div>
+
+            <div class="col-md-10 graph-container">
+                <p style="color: black;">The largest importers of coffee are industrialised countries such as the USA, Germany, France, Japan and Italy. This fact raises fundamental questions about the balance of economic power and how global goods such as coffee are traded and consumed. First, one might observe a certain irony in the fact that while producing countries face direct challenges related to coffee production, such as deforestation and labour exploitation, industrialised countries enjoy the benefits in the form of consumption and corporate profits. These countries often have control over the distribution and marketing networks, thus influencing the final price of coffee and securing a disproportionately large share of the profit generated by the coffee industry, leaving a very small part to the producersFurthermore, the demand for coffee in industrialised countries has created a 'coffee culture' that emphasises speciality and high-quality drinks. This can lead to a disconnect between consumers and the origins of the product, with little attention paid to the conditions under which coffee is grown and harvested. This disconnect can contribute to indifference towards the environmental and social impacts of coffee production in developing countries.</p>
+            </div>
+
+        </div>
+
+
+        <div class="row graph-section">
+            <div class="col-md-12 graph-container">
+                <h2 style="color: black;"><strong>What about the effect on human health</strong></h2>
+                <p style="color: black;">Coffee, with its ability to stimulate and invigorate, has become an almost indispensable component in the daily lives of many. Its constant presence, however, brings with it issues that go beyond simple pleasure or routine. With consumption growing rapidly, it is essential to question the effects that coffee can have on health, well-being and lifestyle. For young people, for example, early and frequent introduction of coffee can have implications on their development and sleep patterns. Research suggests that excessive consumption can negatively affect the sleep cycle, potentially leading to insomnia problems or circadian rhythm disorders. Additionally, caffeine, when taken in large quantities, can lead to nervousness, anxiety and other health problems.At the same time, it is essential to consider the social and cultural context in which coffee is consumed. In many societies, drinking coffee has become a social activity, a time to connect with others. However, this habit can also contribute to a sense of dependency or overuse, especially in stressful environments such as workplaces or universities.</p>
+            </div>
         </div>
 
         <div class="row graph-section">
             <div class="col-md-12 graph-container">
-                <h2 style="color: black;"><strong>Top 50 Participants with greatest sleep difference</strong></h2>
+                <h2 style="color: black;"><strong>Sleep difference with coffe and without coffee</strong></h2>
                 <img src="third_graph.png" style="width: 100%; height: auto;" alt="Top 50 Participants with greatest sleep difference">
-                <p style="color: black;">Qui va la descrizione.</p>
                 <a href="report_graph_4.html" target="_blank">
                     <button style="background-color: #673f2d; color: white; padding: 10px 20px; margin: 10px 0; border: none; cursor: pointer;">
-                        Report
+                        Visualization protocol
                     </button>
                 </a>
                 <a href="sleep_minutes_evident_dataset.csv" download>
@@ -160,16 +194,20 @@
                     </button>
                 </a>
             </div>
+
+            <div class="col-md-10 graph-container">
+                <p style="color: black;">This graph reports the results of a study in which regular coffee consumers were asked to abstain from coffee for a certain period. Their sleep was monitored every night by calculating how many hours they got. Sleep monitoring was also done when the subjects consumed coffee so that the results could be compared. This graph shows 50 participants of the study and it is clearly seen that generally all the participants who consumed coffee slept much more. In the graph you can see a pair of bars that refer to the same participant while he drank the coffee and while he didn't drink it. A similar result was obtained with all other participants.</p>
+            </div>
+
         </div>
 
         <div class="row graph-section">
             <div class="col-md-12 graph-container">
                 <h2 style="color: black;"><strong>Comparison of Average Sleep Duration</strong></h2>
                 <img src="fifth_graph.png" style="width: 100%; height: auto;" alt="Comparison of Average Sleep Duration">
-                <p style="color: black;">Qui va la descrizione.</p>
                 <a href="report_graph_5.html" target="_blank">
                     <button style="background-color: #673f2d; color: white; padding: 10px 20px; margin: 10px 0; border: none; cursor: pointer;">
-                        Report
+                        Visualization protocol
                     </button>
                 </a>
                 <a href="sleep_minutes_evident_dataset.csv" download>
@@ -178,6 +216,18 @@
                     </button>
                 </a>
             </div>
+
+            <div class="col-md-10 graph-container">
+                <p style="color: black;">Here we can see the results of the study on a general scale and it is clear that when you don't consume coffee you sleep much more on average. Obviously this can also depend on the type of person but on average it is like this.</p>
+            </div>
+
+        </div>
+
+        <div class="row graph-section">
+            <div class="col-md-10 graph-container">
+                <p style="color: black;">Many of us rely on that steaming cup to 'wake up' and 'get energy', but is this really the case? Coffee, with its seductive appeal, is positioned as an elixir of vigor, but this is a half truth. It's time to debunk this myth: coffee is not a source of energy, but a mere stimulant. Caffeine, the beating heart of coffee, tricks our nervous system, masking tiredness and giving a false sensation of vitality. But make no mistake: it is only a temporary device. True energy, long-lasting and genuine, comes from other sources: restful sleep and a balanced diet. Sleep, in particular, is the true unsung hero, essential for regenerating the body and mind. So, as we sip our daily coffee, we should ask ourselves: are we really getting energy or are we simply victims of a culturally accepted placebo? The answer may not be as pleasant as the taste of an espresso, but it is certainly more nutritious for our long-term well-being.</p>
+            </div>
+
         </div>
 
     </div>
@@ -185,12 +235,11 @@
     <footer>
         <div class="footer-container">
             <div class="footer-left">
-                <p>SUPSI-Dipartimento tecnologie innovative </p>
+                <p>SUPSI-Department of Innovative Technologies</p>
             </div>
             <div>
-                <p>Group's Name: Matteo Del Grande, Luca Lucchina, Endrit Nazifi</p>
-                <p>School office: SUPSI-Dipartimento tecnologie innovative</p>
-                <p>School Year: D2A 2023-2024</p>
+                <p>Authors: Matteo Del Grande, Luca Lucchina, Endrit Nazifi</p>
+                <p>Class: D2A 2023-2024</p>
             </div>
         </div>
     </footer>
@@ -212,6 +261,8 @@
             }
         }, 1000);
     </script>
+
+    <style>iframe{border:none}</style>
 
 
 </body>
